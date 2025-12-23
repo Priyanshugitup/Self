@@ -7,7 +7,8 @@
 #include <string.h>
 int main(){
     typedef struct records{
-        char name[30];
+        char firstname[30];
+        char lastname[30];
         int age;
         int matchPlayed;
         float average;
@@ -15,7 +16,8 @@ int main(){
     records arr[20];
     for(int i = 0;i<3;i++){
         printf("Enter name of cricketer: ");
-        scanf("%[^\n]s",arr[i].name);
+        scanf("%s",arr[i].firstname);
+        scanf("%s",arr[i].lastname);
         printf("Enter Age: ");
         scanf("%d",&arr[i].age);
         printf("Enter total no. of Test matches played: ");
@@ -25,7 +27,7 @@ int main(){
     }
 
     for(int i = 0;i<3;i++){
-        printf("Name: %s\n",arr[i].name);
+        printf("Name: %s %s\n",arr[i].firstname,arr[i].firstname);
         printf("Age: %d\n",arr[i].age);
         printf("Matches: %d\n",arr[i].matchPlayed);
         printf("Average: %.2f\n",arr[i].average);
