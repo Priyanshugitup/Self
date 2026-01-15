@@ -23,11 +23,11 @@ int main()
         printf("Enter valid position.");
         return 1;
     }
-    for (int i = n; i > p; i--)
+    for (int i = n; i > (p-1); i--)
     {
         arr[i] = arr[i - 1];
     }
-    arr[p] = x;
+    arr[p-1] = x;
     printf("\nArray after insertion.\n");
     for (int i = 0; i <= n; i++)
     {
